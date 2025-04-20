@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Christian Cortez | Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+  <header>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+    <h1>Christian Cortez</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro" data-aos="fade-up">
+    <h2>Hello! I'm Christian, a CS Student</h2>
+      <p>I build cool stuff with code and love learning new things.</p>
+      <a href="#projects"><button class="main-button" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">
+        View My Projects
+      </button>
+      </a>
+    </section>
+  
+    <section id="projects">
+      <h2>Projects</h2>
+  
+      <div class="project-card" data-aos="fade-up">
+        <h3>Personal Portfolio Website</h3>
+        <p>A clean, mobile-responsive site to showcase my work and skills.</p>
+        <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+        <a href="#">Live Demo</a> | <a href="#">GitHub Repo</a>
+      </div>
+  
+      <div class="project-card">
+        <h3>CABO Game</h3>
+        <p>An interactive Java-based card game built with object-oriented principles.</p>
+        <p><strong>Tech Used:</strong> Java, Eclipse</p>
+        <a href="#">GitHub Repo</a>
+      </div>
+  
+      <div class="project-card" data-aos="fade-up">
+        <h3>JukeBox Music Queue</h3>
+        <p>A Java program that simulates a music streaming queue using stacks and queues. Includes shuffle, add, and play functionality.</p>
+        <p><strong>Tech Used:</strong> Java, Data Structures (Stacks & Queues)</p>
+        <a href="https://github.com/co-rtex/JukeBox" target="_blank">GitHub Repo</a>
+      </div>
+      
+    </section>
+
+    <section id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>
+          I'm Christian Cortez, a Computer Science student passionate about building useful tools, learning new technologies, and solving real-world problems. Whether it’s web development, Java projects, or data analysis, I love turning ideas into code.
+        </p>
+        <p>
+          Outside of tech, I enjoy [you can add anything here like hiking, reading sci-fi, or gaming]. I'm always looking to grow, collaborate, and take on new challenges.
+        </p>
+      </section>
+      
+      <section id="contact" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <p>If you'd like to work together, have a question, or just want to say hi — drop a message below!</p>
+      
+        <form action="https://formspree.io/f/mblgnove" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="_replyto" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>      
+      
+  </main>
+  
+
+  <footer>
+    <p>© 2025 Christian Cortez</p>
+  </footer>
+
+  <script src="script.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+/* =========================== */
+/*       COLOR VARIABLES       */
+/* =========================== */
+
+:root {
+    /* PRIMARY SYSTEM */
+    --primary: #3E5879;
+    --primary-dark: #213555;
+    --primary-light: #5F7899;
+  
+    /* NEUTRALS */
+    --bg: #F5EFE7;
+    --text: #213555;
+    --card-bg: #ffffff;
+    --border: #ccc;
+  
+    /* ACCENTS */
+    --accent: #D8C4B6;
+    --accent-hover: #c3b2a5;
+  
+    /* UTILITY COLORS */
+    --error: #e57373;
+    --success: #81c784;
+  }
+  
+  /* =========================== */
+  /*       TYPOGRAPHY            */
+  /* =========================== */
+  
+  h1, nav, header h1 {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  
+  body {
+    font-family: "Roboto Serif", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    background-color: var(--bg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  body.loaded {
+    opacity: 1;
+  }
+  
+  /* =========================== */
+  /*       LAYOUT & COMPONENTS   */
+  /* =========================== */
+  
+  header {
+    background-color: var(--accent);
+    color: var(--primary);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+  }
+  
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  nav a:hover {
+    color: var(--accent-hover);
+  }
+  
+  main {
+    padding: 2em;
+    text-align: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--card-bg);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 3rem; /* or use 2rem if you want less space */
+  }
+  
+  button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+  }
+  
+  a {
+    transition: color 0.2s ease;
+    color: var(--primary);
+  }
+  
+  a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: var(--accent);
+    padding: 1em;
+    text-align: center;
+    color: var(--text);
+  }
+  
+  #projects {
+    padding: 2em;
+    background-color: var(--primary-light);
+  }
+  
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1em auto;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+  }
+  
+  .project-card a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+  
+  #about {
+    padding: 2em;
+    background-color: var(--card-bg);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  
+  #contact {
+    padding: 2em;
+    background-color: var(--accent);
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text);
+  }
+  
+  #contact ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #contact li {
+    margin: 0.5em 0;
+  }
+  
+  #contact a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* =========================== */
+  /*       FORM STYLES           */
+  /* =========================== */
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1.5em;
+    max-width: 600px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    background-color: var(--card-bg);
+    color: var(--text);
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  form button {
+    align-self: flex-start;
+  }
+  
+  /* =========================== */
+  /*       DARK MODE STYLES      */
+  /* =========================== */
+  
+  body.dark-mode {
+    --primary: #A2B6D5;
+    --primary-dark: #7F93AD;
+    --primary-light: #c3d3e7ca;
+  
+    --bg: #1a1a1a;
+    --text: #f2f2f2;
+    --card-bg: #2a2a2a;
+    --border: #444;
+  
+    --accent: #2e3b4e;
+    --accent-hover: #45566d;
+  }
+  
+  body.dark-mode a {
+    color: var(--primary);
+  }
+  
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: var(--accent);
+    color: var(--text);
+  }
+  
+  body.dark-mode .project-card {
+    background-color: var(--card-bg);
+    border-color: var(--border);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+  }
+  
+  body.dark-mode input,
+  body.dark-mode textarea {
+    background-color: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  
+  body.dark-mode button {
+    background-color: var(--primary-dark);
+    color: var(--card-bg);
+  }
+  
+  body.dark-mode a:hover,
+  body.dark-mode nav a:hover {
+  color: var(--accent-hover);
+  }
+  body.dark-mode button:hover {
+    background-color: var(--primary);
+}
+    body.dark-mode #theme-toggle {
+        background-color: var(--text);
+        color: var(--bg);
+        border: 2px solid var(--bg);
+    }
+
+  body.dark-mode #theme-toggle:hover {
+    background-color: var(--accent-hover); 
+  }
+
+  
+  /* =========================== */
+  /*       THEME TOGGLE BUTTON   */
+  /* =========================== */
+  
+  #theme-toggle {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text);
+    border: 2px solid var(--text);
+  }
+  
+  #theme-toggle:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  body.dark-mode #theme-toggle {
+    background-color: var(--text);
+    color: var(--bg);
+    border: 2px solid var(--bg);
+  }
+  
+  body.dark-mode #theme-toggle:hover {
+    background-color: var(--accent);
+  }
+  
+  /* =========================== */
+  /*       MOBILE STYLES         */
+  /* =========================== */
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0.5em;
+      padding: 0;
+    }
+  
+    .project-card, #about, #contact {
+      padding: 1em;
+      margin: 1em;
+    }
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
